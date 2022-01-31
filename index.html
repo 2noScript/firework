@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+	<script src="./firework.js" defer></script>
+	<title>Document</title>
+
+	<style>
+		/* #container {
+			position: absolute;
+			top: 100px;
+			left: 100px;
+		} */
+		body {
+			position: relative;
+			overflow: hidden;
+		}
+
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		#myContainer {
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: #000;
+			/* background-color: aqua; */
+			width: 100vw;
+			height: 100%;
+
+		}
+
+		.clock {
+			background-color: white;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			/* width: 40%; */
+			min-width: 1000px;
+			height: 160px;
+			font: sans-serif;
+			font-size: 200px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			top: 30%;
+			background-color: transparent;
+			color: white;
+		}
+
+		#audio {
+			position: absolute;
+			transform: translateX(-50%);
+			left: 50%;
+			/* height: 100%; */
+			/* background-color: black; */
+			/* background-color: transparent; */
+
+		}
+	</style>
+</head>
+
+<body>
+	<div id='myContainer' onclick={}>
+		<div class='clock'></div>
+		<audio src='./Happy New Year_2.mp3' id='audio'>
+		</audio>
+	</div>
+	<script>
+		var x = document.querySelector('#audio')
+		var y = document.querySelector('#myContainer')
+		y.onclick = function () {
+			x.play();
+		}
+	</script>
+</body>
+
+</html>
